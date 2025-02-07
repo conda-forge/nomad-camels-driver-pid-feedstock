@@ -23,7 +23,6 @@ requirements:
   run:
     - nomad-camels >=1.1.0
     - python >={{ python_min }}
-    - nomad-camels >=0.2.4
     - simple-pid
 
 test:
