@@ -1,14 +1,14 @@
-{% set python_min = "3.10" %}
+{% set python_min = "3.11" %}
 {% set name = "nomad-camels-driver-PID" %}
-{% set version = "0.1.8" %}
+{% set version = "0.1.9" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/nomad_camels_driver_PID-{{ version }}.tar.gz
-  sha256: 5a10582833d8a1f4132e0e40f3047f2d003c6111d4f88c9691180b0d4bbdac71
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name.replace('-', '_').lower() }}/{{ name.replace('-', '_').lower() }}-{{ version }}.tar.gz
+  sha256: aed888b007c9d0446894f822e68e6c784eb9be94c788a0433d6a3d5a487330b2
 
 build:
   noarch: python
@@ -21,8 +21,8 @@ requirements:
     - setuptools >=61.0
     - pip
   run:
+    - nomad-camels >=1.1.0
     - python >={{ python_min }}
-    - nomad-camels >=0.2.4
     - simple-pid
 
 test:
