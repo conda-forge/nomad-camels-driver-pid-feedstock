@@ -1,6 +1,6 @@
 {% set python_min = "3.11" %}
 {% set name = "nomad-camels-driver-PID" %}
-{% set version = "0.1.9" %}
+{% set version = "0.1.10" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name.replace('-', '_').lower() }}/{{ name.replace('-', '_').lower() }}-{{ version }}.tar.gz
-  sha256: aed888b007c9d0446894f822e68e6c784eb9be94c788a0433d6a3d5a487330b2
+  sha256: 20e40285f7d59c097602fb49b60d568385af9f972b55356a7941a86083b407c9
 
 build:
   noarch: python
